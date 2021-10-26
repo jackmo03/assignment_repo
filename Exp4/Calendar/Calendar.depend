@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1635229052 source:d:\mos2\codeblock_projects\exp4\calendar\main.c
+	<stdio.h>
+	<stdlib.h>
+

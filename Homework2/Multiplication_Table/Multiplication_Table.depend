@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1634797976 source:d:\mos2\codeblock_projects\homework2\multiplication_table\main.c
+	<stdio.h>
+	<stdlib.h>
+

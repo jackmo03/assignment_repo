@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1634801640 source:d:\mos2\codeblock_projects\homework2\salvo\main.c
+	<stdio.h>
+	<stdlib.h>
+

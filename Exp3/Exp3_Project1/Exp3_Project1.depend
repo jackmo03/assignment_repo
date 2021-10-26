@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1634636148 source:d:\exp3\exp3_project1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1634642641 source:d:\mos2\codeblock_projects\exp3\exp3_project1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
