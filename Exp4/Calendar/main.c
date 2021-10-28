@@ -4,22 +4,15 @@
 //判断某个月的天数
 int GetMonthDays(int iYear, int iMonth)
 {
-    int  D30[4]={4,6,9,11};
+    int days[12]={31,28,31,30,31,30,31,31,30,31,30,31};
+    int i=days[iMonth-1];
 
     if (iMonth==2)
     {
         if ((iYear%4==0 && iYear%100!=0) || iYear%400==0)
-            return 29;
-        else
-            return 28;
+            i++;
     }
-
-    else if (iMonth==D30[4])
-        return 30;
-
-    else
-        return 31;
-
+    return i;
 }
 
 //判断某月某日为周几
