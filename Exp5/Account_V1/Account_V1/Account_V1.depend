@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1635842153 source:e:\exp5\account_v1.0\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1636008237 source:d:\mos2\codeblock_projects\exp5\account_v1\main.c
+	<stdio.h>
+	<stdlib.h>
+
