@@ -59,11 +59,7 @@ void SelectionSortOrder(int uids[], int expenses[], int choice,int counter)//Ñ¡Ô
         k=i;
         for (j=i+1; j<counter; j++)
         {
-            if (choice==2 && expenses[j]>expenses[k])
-                k=j;
-            if (choice==3 && expenses[j]<expenses[k])
-                k=j;
-            if (choice==7 && uids[j]<uids[k])
+            if ((choice==2 && expenses[j]>expenses[k]) || (choice==3 && expenses[j]<expenses[k]) || (choice==7 && uids[j]<uids[k]))
                 k=j;
         }
         if (k!=i)
@@ -141,8 +137,9 @@ int main()
                 //Ñ¡ÔñÅÅÐò·¨¼°Êä³ö
                 case 2:
                 case 3:
+                case 7:
                     SelectionSortOrder(uids, expenses, choice, counter);
-                    OutputDatas(choice);
+                    OutputDatas();
                     break;
                 //Ã°ÅÝÅÅÐò·¨
                 case 4:
@@ -177,11 +174,6 @@ int main()
                             printf("%d\t%d\t%d\t\n",uids[i],incomes[i],expenses[i]);
                         }
                     }
-                    break;
-                //Êä³öÏµÍ³ÖÐËùÓÐµÄ¼ÇÕËÐÅÏ¢£¨°´IDÉýÐò£©
-                case 7:
-                    SelectionSortOrder(uids,expenses,choice,counter);
-                    OutputDatas();
                     break;
                 default:
                     printf("Exit...");
