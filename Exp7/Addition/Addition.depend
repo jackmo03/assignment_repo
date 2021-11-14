@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1636716126 source:f:\exp7\addition\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1636868723 source:d:\mos2\codeblock_projects\exp7\addition\main.c
+	<stdio.h>
+	<stdlib.h>
+

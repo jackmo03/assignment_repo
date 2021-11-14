@@ -35,43 +35,52 @@ void MulMatrix(int m,int n,int k,double *A,double *B,double *C)//A为m行n列矩阵，
 
 int main()
 {
-    int rowA22,  columnA22, rowB22, columnB22;
+    int rowA22,  columnA22, rowB22, columnB22, ret;
     double *matrixA22 = NULL, *matrixB22 = NULL, *matrixC22 = NULL;
-    printf("请输入矩阵A的行数、列数：\n");
-    scanf("%d%*c%d", &rowA22, &columnA22);
-
-    matrixA22 = (double*)calloc(rowA22*columnA22, sizeof(double));
-    if (matrixA22 == NULL)
+    printf("请输入矩阵A的行数、列数（如3*4）：\n");
+    ret = scanf("%d*%d", &rowA22, &columnA22);
+    if (ret != 2)
     {
-        printf("No enough memory!\n");
-        exit(1);
-    }
-
-    printf("请输入行列式A：\n");
-    InputMatrix(matrixA22, rowA22, columnA22);
-
-    printf("请输入矩阵B的行数、列数：\n");
-    scanf("%d%*c%d", &rowB22, &columnB22);
-
-    matrixB22 = (double*)calloc(rowB22*columnB22, sizeof(double));
-    if (matrixB22 == NULL)
-    {
-        printf("No enough memory!\n");
-        exit(1);
-    }
-
-    if (rowB22 != columnA22)
         printf("Input error!\n");
+        fflush(stdin);
+    }
 
-    printf("请输入行列式B：\n");
-    InputMatrix(matrixB22, rowB22, columnB22);
+    else
+    {
+        matrixA22 = (double*)calloc(rowA22*columnA22, sizeof(double));
+        if (matrixA22 == NULL)
+        {
+            printf("No enough memory!\n");
+                exit(1);
+        }
 
-    matrixC22 = (double*)calloc(rowA22*columnB22, sizeof(double));
-    MulMatrix(rowA22, columnA22, columnB22, matrixA22, matrixB22, matrixC22);
+        printf("请输入矩阵A：\n");
+        InputMatrix(matrixA22, rowA22, columnA22);
 
-    printf("Result:\n");
-    PrintMatrix(matrixC22, rowA22, columnB22);
+        printf("请输入矩阵B的行数、列数：\n");
+        scanf("%d%*c%d", &rowB22, &columnB22);
 
-    free(matrixA22),free(matrixB22),free(matrixC22);
+        matrixB22 = (double*)calloc(rowB22*columnB22, sizeof(double));
+        if (matrixB22 == NULL)
+        {
+            printf("No enough memory!\n");
+            exit(1);
+        }
+
+        if (rowB22 != columnA22)
+            printf("Input error!\n");
+
+        printf("请输入矩阵B：\n");
+            InputMatrix(matrixB22, rowB22, columnB22);
+
+        matrixC22 = (double*)calloc(rowA22*columnB22, sizeof(double));
+        MulMatrix(rowA22, columnA22, columnB22, matrixA22, matrixB22, matrixC22);
+
+        printf("Result:\n");
+        PrintMatrix(matrixC22, rowA22, columnB22);
+
+        free(matrixA22),free(matrixB22),free(matrixC22);
+    }
+
     return 0;
 }

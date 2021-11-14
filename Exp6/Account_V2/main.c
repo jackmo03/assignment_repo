@@ -69,7 +69,8 @@ int main()
                     for (int i=1; i<=counter; i++)
                     {
                         int ret, uid, income, expense;
-                        ret=scanf("%d %s %d %d", &uid, usernames[i-1], &income, &expense);
+                        char TEMP[11];
+                        ret=scanf("%d %10s %d %d", &uid, TEMP, &income, &expense);
                         if (ret==4 && counter<=(LENGTH-1))
                         {
                             if (uid>=0 && uid<=99999 && income>=0 && expense>=0)
@@ -80,7 +81,10 @@ int main()
                                     fflush(stdin);
                                 }
                                 else
+                                {
                                     uids[i-1] = uid, incomes[i-1] = income, expenses[i-1] = expense;
+                                    strcpy(usernames[i-1], TEMP);
+                                }
                             }
                             else if(uid==-1)
                                 break;

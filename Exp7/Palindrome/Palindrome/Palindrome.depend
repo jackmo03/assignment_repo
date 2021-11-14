@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1636719396 source:f:\exp7\palindrome\palindrome\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1636869022 source:d:\mos2\codeblock_projects\exp7\palindrome\palindrome\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

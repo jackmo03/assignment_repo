@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1636869412 source:d:\mos2\codeblock_projects\exp7\matrixtranspose\matrixtranspos\main.c
+	<stdio.h>
+	<stdlib.h>
+
